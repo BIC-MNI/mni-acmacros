@@ -10,6 +10,8 @@ AC_DEFUN([mni_REQUIRE_X11],
 #
 # SoQt needs the above plus SM, ICE, Xi and Xmu
     if test "$no_x" != yes; then
+	CPPFLAGS="$CPPFLAGS $X_CFLAGS"
+	LDFLAGS="$LDFLAGS $X_LIBS"
 	LIBS="$X_PRE_LIBS -lXmu -lXi -lXext -lSM -lICE -lX11 $X_EXTRA_LIBS $LIBS"
     fi
 ])    
