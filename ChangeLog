@@ -1,3 +1,8 @@
+2001-10-28  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
+
+	* README (EXTRA_DIST): Include explicit list of m4 files,
+	handy for cut'n'paste --- if kept up-to-date!
+
 2001-10-23  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
 	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_GL): New.
