@@ -1,10 +1,10 @@
-
 AC_DEFUN([mni_REQUIRE_MINC],
 [
     mni_REQUIRE_LIB(m,[#include <math.h>],[double x = sqrt(3.);])
     mni_REQUIRE_LIB(netcdf,[#include <netcdf.h>],[int i = ncopen("",0);])
     mni_REQUIRE_LIB(minc,[#include <minc.h>],[int i = miicv_create();])
 ])
+
 
 AC_DEFUN([mni_REQUIRE_VOLUMEIO],
 [
@@ -15,6 +15,7 @@ AC_DEFUN([mni_REQUIRE_VOLUMEIO],
 	 	     Real voxel = 0;
                      Real x = convert_voxel_to_value(vol,voxel);])
 ])
+
 
 AC_DEFUN([mni_REQUIRE_BICPL],
 [
@@ -36,3 +37,19 @@ AC_DEFUN([mni_REQUIRE_OOBICPL],
     mni_REQUIRE_LIB(oobicpl,[#include <mniVolume.h>],[mniVolume vol;])
     AC_LANG_POP
 ])
+
+
+AC_DEFUN([mni_REQUIRE_BICINVENTOR],
+[
+    AC_REQUIRE([mni_REQUIRE_BICPL])
+    AC_REQUIRE([mni_REQUIRE_OOBICPL])
+    AC_REQUIRE([mni_REQUIRE_OPENINVENTOR])
+
+    AC_LANG_PUSH(C++)
+    mni_REQUIRE_LIB(bicInventor,
+                    [#include <bicInventor.h>],
+                    [SoSeparator* root = bic_graphics_file_to_iv("foo.iv");])
+    AC_LANG_POP
+])
+
+

@@ -1,3 +1,7 @@
+2001-10-29  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
+
+	* mni_REQUIRE_MNILIBS.m4 (mni_REQUIRE_BICINVENTOR): New.
+
 2001-10-28  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
 	* README (EXTRA_DIST): Include explicit list of m4 files,
