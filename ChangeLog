@@ -1,4 +1,5 @@
 2001-09-10  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
+	* README:
 	* mni_CXX_HAVE_KOENIG_LOOKUP.m4: New.
 
