@@ -27,3 +27,18 @@ AC_DEFUN([mni_REQUIRE_BICPL],
                      Status s = input_graphics_file("",&format,&n_obj,&obj_list)])
 ])
 
+AC_DEFUN([mni_REQUIRE_OOBICPL],
+[
+    AC_REQUIRE([mni_REQUIRE_BICPL])
+
+    AC_LANG_PUSH(C++)
+
+    AC_MSG_CHECKING([for library oobicpl])
+    LIBS="-loobicpl $LIBS"
+    AC_TRY_LINK([#include <mniVolume.h>],
+                [mniVolume vol;],,
+                [AC_MSG_ERROR(cannot find oobicpl library)])
+    AC_MSG_RESULT([yes])
+
+    AC_LANG_POP
+])
