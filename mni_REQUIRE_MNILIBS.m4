@@ -1,9 +1,19 @@
 AC_DEFUN([mni_REQUIRE_MINC],
 [
+    AC_ARG_WITH([minc2],
+    [  --with-minc2            build using minc 2.0 libraries],
+    [
+    ])
     mni_REQUIRE_LIB(m,[#include <math.h>],[double x = sqrt(3.);])
     mni_REQUIRE_LIB(netcdf,[#include <netcdf.h>],[int i = ncopen("",0);])
-    mni_REQUIRE_LIB(minc,[#include <minc.h>],[int i = miicv_create();])
+    if test "$with_minc2" = "yes"; then
+        mni_REQUIRE_LIB(hdf5,[#include <hdf5.h>],[int f = H5Fopen("",0,H5P_DEFAULT);])
+        mni_REQUIRE_LIB(minc2,[#include <minc.h>],[int i = miicv_create();])
+    else
+        mni_REQUIRE_LIB(minc,[#include <minc.h>],[int i = miicv_create();])
+    fi
 ])
+
 
 
 AC_DEFUN([mni_REQUIRE_VOLUMEIO],
@@ -15,7 +25,6 @@ AC_DEFUN([mni_REQUIRE_VOLUMEIO],
 	 	     Real voxel = 0;
                      Real x = convert_voxel_to_value(vol,voxel);])
 ])
-
 
 AC_DEFUN([mni_REQUIRE_BICPL],
 [
