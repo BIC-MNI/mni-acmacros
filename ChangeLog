@@ -1,3 +1,8 @@
+2001-12-17  Steve ROBBINS  <stever@bic.mni.mcgill.ca>
+
+	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_X11): Add -lXi to LIBS,
+	for the sake of SoQt.
+
 2001-11-16  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
 	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_QTGL): Check

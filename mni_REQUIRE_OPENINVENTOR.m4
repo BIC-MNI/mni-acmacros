@@ -12,7 +12,7 @@ AC_DEFUN([mni_REQUIRE_X11],
     if test "$no_x" != yes; then
 	CPPFLAGS="$CPPFLAGS $X_CFLAGS"
 	LDFLAGS="$LDFLAGS $X_LIBS"
-	LIBS="$X_PRE_LIBS -lXmu -lXext -lSM -lICE -lX11 $X_EXTRA_LIBS $LIBS"
+	LIBS="$X_PRE_LIBS -lXmu -lXext -lSM -lICE -lXi -lX11 $X_EXTRA_LIBS $LIBS"
     fi
 ])    
 
