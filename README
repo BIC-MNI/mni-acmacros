@@ -37,6 +37,17 @@ to insert
 to have "aclocal" scan the correct directory (change the -I option as
 appropriate).
 
+Your package will also need to distribute the m4 files since they
+are required to regenerate the file "aclocal.m4".  Automake will
+generate a rule for "aclocal.m4" that depends on all the .m4 files.
+Unfortunately, automake is too conservative in this regard: the 
+generated rule will depend on *all* the m4 files scanned, even if
+the macro contained is not used.  Thus, you will need to include
+by hand all the files m4/*.m4 in the EXTRA_DIST list.  Add the
+following to Makefile.am:
+
+	EXTRA_DIST = m4/mni_REQUIRE_LIB.m4 ...
+
 
 
 Macro smr_WITH_BUILD_PATH
