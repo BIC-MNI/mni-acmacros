@@ -1,6 +1,12 @@
+2005-04-02  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
+
+	* lf_link_headers.m4: New (adapted from macro found in geomview).
+	Added for use in SEAL package.
+
 2003-11-16  Steve ROBBINS  <stever@bic.mni.mcgill.ca>
 
-	* mni_REQUIRE_MNILIBS.m4 (mni_REQUIRE_EBTKS): Do not require MNI libs.
+	* mni_REQUIRE_MNILIBS.m4 (mni_REQUIRE_EBTKS): Do not require MNI
+	libs.
 
 2003-07-25  Steve ROBBINS  <stever@bic.mni.mcgill.ca>
 
