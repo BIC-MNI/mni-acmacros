@@ -1,3 +1,9 @@
+2003-07-25  Steve ROBBINS  <stever@bic.mni.mcgill.ca>
+
+	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_QTGL): Revised change
+	of 2003-07-09.  Do not mess with LDFLAGS nor CPPFLAGS if no QTDIR
+	set.  Do not mess with the PATH.
+
 2003-07-09  Jason Lerch    <jason@bic.mni.mcgill.ca>
 
 	* mni_REQUIRE_OPENINVENTOR: changed the check for the QT library
