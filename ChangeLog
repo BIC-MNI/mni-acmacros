@@ -1,3 +1,15 @@
+2001-10-23  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
+
+	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_GL): New.
+	(mni_REQUIRE_OPENINVENTOR): Simplified using the above.
+	(mni_REQUIRE_QT): New.
+	(mni_REQUIRE_SOQT): Simplified using the preceding and
+	mni_REQUIRE_LIB.  Removed explicit -lXi from LIBS; should probably
+	use AC_PATH_XTRA or something.
+
+	* mni_REQUIRE_MNILIBS.m4 (mni_REQUIRE_OOBICPL): Simplified using
+	mni_REQUIRE_LIB.
+
 2001-10-18  Jason Lerch       <jason@bic.mni.mcgill.ca>
 
 	* mni_REQUIRE_OPENINVENTOR.m4: added a new function that checks
