@@ -19,11 +19,19 @@ AC_DEFUN([mni_REQUIRE_MINC],
 AC_DEFUN([mni_REQUIRE_VOLUMEIO],
 [
     AC_REQUIRE([mni_REQUIRE_MINC])
-    mni_REQUIRE_LIB(volume_io,
-		    [#include <volume_io.h>],
-		    [Volume vol; 
-	 	     Real voxel = 0;
-                     Real x = convert_voxel_to_value(vol,voxel);])
+    if test "$with_minc2" = "yes"; then
+      mni_REQUIRE_LIB(volume_io2,
+  	              [#include <volume_io.h>],
+                      [Volume vol; 
+	 	      Real voxel = 0;
+                      Real x = convert_voxel_to_value(vol,voxel);])
+    else
+      mni_REQUIRE_LIB(volume_io,
+  	              [#include <volume_io.h>],
+                      [Volume vol; 
+	 	      Real voxel = 0;
+                      Real x = convert_voxel_to_value(vol,voxel);])
+    fi
 ])
 
 AC_DEFUN([mni_REQUIRE_BICPL],
