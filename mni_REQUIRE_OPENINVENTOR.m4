@@ -72,6 +72,8 @@ AC_DEFUN([mni_REQUIRE_QTGL],
     AC_LANG_PUSH(C++)
     mni_REQUIRE_LIB(qt,[#include <qapplication.h>],[QString str;])
     AC_LANG_POP
+    AC_PATH_PROGS(MOC, moc, echo, $PATH:$QTDIR/bin)
+    AC_PATH_PROGS(UIC, uic, echo, $PATH:$QTDIR/bin)
 ])
     
 

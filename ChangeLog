@@ -1,5 +1,8 @@
 2001-11-16  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
+	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_QTGL): Check
+	for moc and uic.
+
 	* smr_CGAL_MAKEFILE.m4: New.  For CGAL-based projects.
 
 2001-11-01  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
