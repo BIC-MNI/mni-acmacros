@@ -3,7 +3,7 @@ dnl
 dnl This macro adds a "--with-cgal-makefile" option to the configure script,
 dnl in order to specify where the CGAL skeletal makefile is located.
 dnl
-dnl @version $Id: smr_CGAL_MAKEFILE.m4,v 1.1 2001-11-16 15:11:05 stever Exp $
+dnl @version $Id: smr_CGAL_MAKEFILE.m4,v 1.2 2002-05-07 01:13:25 stever Exp $
 dnl @author Steve M. Robbins <smr@debian.org>
 
 AC_DEFUN([smr_CGAL_MAKEFILE],
@@ -20,7 +20,7 @@ AC_DEFUN([smr_CGAL_MAKEFILE],
 ])
 
 if test -z "$CGAL_MAKEFILE"; then
-    for cm in cgal_makefile ../cgal_makefile none; do
+    for cm in cgal_makefile ../cgal_makefile ../../cgal_makefile none; do
 	test -r $cm && break
     done
     if test $cm = none; then
