@@ -9,6 +9,7 @@ AC_DEFUN([mni_REQUIRE_MINC],
     if test "$with_minc2" = "yes"; then
         mni_REQUIRE_LIB(hdf5,[#include <hdf5.h>],[int f = H5Fopen("",0,H5P_DEFAULT);])
         mni_REQUIRE_LIB(minc2,[#include <minc.h>],[int i = miicv_create();])
+        AC_DEFINE([MINC2], 1, [Define if should build with MINC 2.0])
     else
         mni_REQUIRE_LIB(minc,[#include <minc.h>],[int i = miicv_create();])
     fi
