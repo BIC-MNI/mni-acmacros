@@ -1,3 +1,8 @@
+2001-10-18  Jason Lerch       <jason@bic.mni.mcgill.ca>
+
+	* mni_REQUIRE_OPENINVENTOR.m4: added a new function that checks
+	for SoQt and added a check for GL into the main function.
+
 2001-09-14  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
 	* README: Add note about EXTRA_DIST.
