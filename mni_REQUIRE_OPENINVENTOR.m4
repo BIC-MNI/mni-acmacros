@@ -70,10 +70,22 @@ AC_DEFUN([mni_REQUIRE_QTGL],
     AC_REQUIRE([mni_REQUIRE_GLU])
 
     AC_LANG_PUSH(C++)
-    mni_REQUIRE_LIB(qt,[#include <qapplication.h>],[QString str;])
+    	AC_SUBST([QTDIR], [$QTDIR])
+	AC_MSG_CHECKING([value of the QTDIR environment variable])
+	if test x"$QTDIR" = x""; then
+	   AC_MSG_RESULT([empty])
+           AC_MSG_WARN([QTDIR environment variable not set -- this might be an indication of a problem])
+        else
+           AC_MSG_RESULT([$QTDIR])
+        fi
+	LDFLAGS="-L$QTDIR/lib $LDFLAGS"
+        CPPFLAGS="-I$QTDIR/include $CPPFLAGS"
+        PATH=$QTDIR/bin:$PATH
+    	mni_REQUIRE_LIB(qt,[#include <qapplication.h>],[QString str;])
+    
     AC_LANG_POP
-    AC_PATH_PROGS(MOC, moc, echo, $PATH:$QTDIR/bin)
-    AC_PATH_PROGS(UIC, uic, echo, $PATH:$QTDIR/bin)
+    AC_PATH_PROGS(MOC, moc, echo, $PATH)
+    AC_PATH_PROGS(UIC, uic, echo, $PATH)
 ])
     
 

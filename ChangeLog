@@ -1,3 +1,8 @@
+2003-07-09  Jason Lerch    <jason@bic.mni.mcgill.ca>
+
+	* mni_REQUIRE_OPENINVENTOR: changed the check for the QT library
+	so that it now takes the QTDIR environment variable into account.
+
 2002-03-20  Jason Lerch	   <jason@bic.mni.mcgill.ca>
 
 	* mni_REQUIRE_MNILIBS: added EBTKS check
