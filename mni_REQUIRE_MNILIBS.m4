@@ -30,8 +30,6 @@ AC_DEFUN([mni_REQUIRE_BICPL],
 
 AC_DEFUN([mni_REQUIRE_EBTKS],
 [
-    AC_REQUIRE([mni_REQUIRE_VOLUMEIO])
-
     AC_LANG_PUSH(C++)
     mni_REQUIRE_LIB(EBTKS, [#include <EBTKS/Path.h>],[Path path;])
     AC_LANG_POP

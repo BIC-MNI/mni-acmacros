@@ -1,3 +1,7 @@
+2003-11-16  Steve ROBBINS  <stever@bic.mni.mcgill.ca>
+
+	* mni_REQUIRE_MNILIBS.m4 (mni_REQUIRE_EBTKS): Do not require MNI libs.
+
 2003-07-25  Steve ROBBINS  <stever@bic.mni.mcgill.ca>
 
 	* mni_REQUIRE_OPENINVENTOR.m4 (mni_REQUIRE_QTGL): Revised change
