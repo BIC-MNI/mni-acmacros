@@ -1,3 +1,7 @@
+2006-02-14  Bert Vincent <bert@bic.mni.mcgill.ca>
+	* mni_REQUIRE_MNILIBS.m4 (mni_REQUIRE_MINC): If the user specifies
+	"--with-minc2", explicitly require zlib.
+	
 2005-04-02  Steve M. Robbins  <steve@nyongwa.montreal.qc.ca>
 
 	* acx_pthread.m4:
